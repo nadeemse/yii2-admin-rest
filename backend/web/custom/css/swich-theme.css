@@ -1,0 +1,36 @@
+.slimScrollDiv, .sidebar-inner.slimscrollleft{
+    max-height: 900px;
+}
+
+.side-menu, #sidebar-menu{
+    overflow: visible !important;
+}
+
+#sidebar-menu ul ul a {
+    color: #75798B;
+    display: block;
+    padding: 10px 20px 10px 35px;
+}
+
+.breadcrumb {
+    float: right;
+}
+.page-title {
+    float: left;
+}
+
+.customer-profile .tab-content {
+    padding: 30px 5px 30px 5px !important;
+}
+.customer-profile .tabs-vertical-env .tab-content {
+    padding: 0px !important;
+}
+
+.btn-full-width {
+    width: 100%;
+}
+
+.max-hight-300 {
+    max-height: 300px;
+    overflow-y: auto;
+}

@@ -1,0 +1,42 @@
+<?php
+
+use yii\helpers\Html;
+use yii\grid\GridView;
+
+/* @var $this yii\web\View */
+/* @var $searchModel backend\models\CountrySearch */
+/* @var $dataProvider yii\data\ActiveDataProvider */
+
+$this->title = Yii::t('app', 'Countries');
+$this->params['breadcrumbs'][] = $this->title;
+?>
+
+<div class="card card-box">
+    <?php echo $this->render('_search', ['model' => $searchModel]); ?>
+</div>
+
+<div class="country-index card card-box">
+
+    <p class="pull-right">
+        <?= Html::a(Yii::t('app', 'Create Country'), ['create'], ['class' => 'btn btn-success']) ?>
+    </p>
+
+    <?= GridView::widget([
+        'dataProvider' => $dataProvider,
+        //'filterModel' => $searchModel,
+        'columns' => [
+            ['class' => 'yii\grid\SerialColumn'],
+
+            'country_code',
+            'country_name',
+            [
+                'attribute' => 'isAvailable',
+                'value' => function($model) {
+                    return $model->isAvailable === 1 ? 'Yes' : 'No';
+                }
+            ],
+
+            ['class' => 'yii\grid\ActionColumn'],
+        ],
+    ]); ?>
+</div>
