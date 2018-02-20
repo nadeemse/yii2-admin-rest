@@ -1,0 +1,131 @@
+/*
+ * common.less
+ * -----------------------------------------------
+*/
+.read-more {
+  position: relative;
+}
+.read-more::after {
+  content: "\f054";
+  font-family: fontawesome;
+  font-size: 11px;
+  margin-left: 5px;
+  vertical-align: middle;
+}
+.read-more:hover::after {
+  margin-left: 8px;
+  .transition(all 200ms ease-in-out 0s);
+}
+.border-dashed-1px {
+  border: 1px dashed #fff;
+}
+.mfp-close-btn-in .mfp-close {
+  right: 5px;
+  top: 5px;
+}
+.portfolio-filter a {
+  color: @black-333;
+}
+.play-btn {
+  border-radius: 50%;
+  font-size: 72px;
+  height: 56px;
+  line-height: 56px;
+  transition: all 100ms ease-in-out 0s;
+  width: 56px;
+}
+.vertical-align-middle {
+  vertical-align: middle;
+}
+.call-to-action {
+  display: inline-block;
+}
+.header-search {
+  cursor: pointer;
+  display: inline-block;
+  margin-left: 18px;
+  margin-top: 0;
+}
+.search-menu {
+  border-radius: 50%;
+  display: block;
+  height: 36px;
+  position: relative;
+  text-align: center;
+  transition: all 0.3s ease 0s;
+  width: 36px;
+}
+.search {
+  border: medium none;
+  box-shadow: none;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 71px;
+  width: 330px;
+  z-index: 9999;
+}
+.search-menu i.search {
+  height: inherit;
+  margin: 0;
+  position: static;
+  width: inherit;
+}
+.search-menu i {
+  color: #ffffff;
+  display: block;
+  font-size: 16px;
+  line-height: 36px;
+}
+.header-search .search-form {
+  border-top: 1px solid #86bc42;
+  float: right;
+  width: 290px;
+}
+.search-form {
+  overflow: hidden;
+}
+.search .search-form {
+  transform: scaleY(0);
+  transition: all 150ms ease-in-out 0s;
+}
+.search.open .search-form {
+  transform: scaleY(1);
+}
+.search .search-form input[type="text"] {
+  background: #fff none repeat scroll 0 0;
+  border: 1px solid #ccc;
+  box-shadow: none;
+  color: #666666;
+  font-size: 14px;
+  font-weight: 300;
+  height: 49px;
+  padding: 0 50px 0 15px;
+  width: 100%;
+}
+.search .search-form button[type="submit"] {
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+  border: medium none;
+  color: #86bc42;
+  display: block;
+  font-size: 18px;
+  height: 50px;
+  line-height: 48px;
+  padding: 0 15px;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+  transition: all 0.3s ease 0s;
+}
+.gallery-isotope.default-animation-effect .gallery-item .text-holder {
+  padding: 20px 20px 60px;
+}
+.header.header-floating.header-transparent-dark.dark-light .header-top, 
+.header.header-floating.header-transparent-dark.dark-light .header-mid, 
+.header.header-floating.header-transparent-dark.dark-light .header-nav {
+  background-color: rgba(0, 0, 0, 0.12);
+}
+.header.header-floating.header-transparent-dark.dark-light .sticky-wrapper.is-sticky .header-nav.navbar-sticky {
+  background-color: #fff;
+}

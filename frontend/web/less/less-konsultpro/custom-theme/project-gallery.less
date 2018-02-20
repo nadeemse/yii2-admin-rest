@@ -1,0 +1,75 @@
+/*
+ * project-gallery.less
+ * -----------------------------------------------
+*/
+.project-gallery {
+  margin: 0 auto 6px;
+  max-width: 400px;
+}
+.project-gallery .project-thumb {
+  overflow: hidden;
+  position: relative;
+}
+.project-gallery .project-thumb::before {
+  content: "";
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  bottom: 50%;
+  transition: all 500ms ease 0s;
+  visibility: hidden;
+  width: 100%;
+}
+.project-gallery:hover .project-thumb::before {
+  opacity: 1;
+  bottom: 0;
+  visibility: visible;
+}
+.project-caption {
+  top: -10%;
+  color: #fff;
+  left: 0;
+  opacity: 0;
+  padding-left: 25px;
+  padding-right: 25px;
+  position: absolute;
+  visibility: hidden;
+  width: 100%;
+}
+.project-gallery:hover .project-caption {
+  top: 10%;
+  opacity: 1;
+  visibility: visible;
+}
+.project-caption h3 {
+  font-size: 22px;
+  opacity: 0;
+  position: relative;
+  bottom: -40px;
+  transition: all 200ms ease 200ms;
+}
+.project-gallery:hover h3 {
+  opacity: 1;
+  bottom: 0;
+}
+.project-caption p {
+  opacity: 0;
+  position: relative;
+  bottom: -40px;
+  transition: all 300ms ease 300ms;
+}
+.project-gallery:hover p {
+  opacity: 1;
+  bottom: 0;
+}
+.project-caption a {
+  opacity: 0;
+  position: relative;
+  bottom: -40px;
+  transition: all 400ms ease 400ms;
+}
+.project-gallery:hover a {
+  opacity: 1;
+  bottom: 0;
+}

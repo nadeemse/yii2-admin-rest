@@ -1,0 +1,88 @@
+/*
+ * causes.less
+ * -----------------------------------------------
+*/
+.course-thumb {
+  position: relative;
+}
+.price-tag {
+  border-radius: 0;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  padding: 0 10px;
+  position: absolute;
+  right: -7px;
+  text-transform: capitalize;
+  top: 16px;
+  .transition(all 150ms ease-in-out 0s);
+}
+.course-single-item:hover .price-tag {
+    padding: 2px 16px;
+}
+.price-tag::before {
+  border-left: 7px solid rgba(0, 0, 0, 0.45);
+  border-top: 7px solid transparent;
+  content: "";
+  height: 0;
+  position: absolute;
+  right: -1px;
+  top: 0;
+  transform: translateY(-100%);
+  width: 0;
+}
+.course-meta li {
+  border-right: 1px solid #ddd;
+  padding: 0 18px;
+}
+.course-meta li:last-child {
+  border-right: medium none;
+}
+.course-meta li h6 {
+  color: #444;
+  font-size: 14px;
+  font-weight: 600;
+  margin: 5px 0 0;
+}
+.course-meta li span {
+  font-size: 13px;
+  margin: 0;
+}
+.course-info-title {
+  color: @black-555;
+  float: left;
+  font-weight: 600;
+  width: 25%;
+}
+.course-info-list > li {
+  clear: both;
+  margin-top: 20px;
+}
+@media only screen and (max-width : 1199px) {
+	.top-course-thumb .desc-box .title {
+	  font-size: 18px;
+	  top: 35%;
+	}
+	.top-course-thumb .desc-box .off {
+	  font-size: 35px;
+	  top: 46%;
+	}
+}
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 991px) {
+	.top-course-thumb {
+	  max-width: 430px;
+	}
+	.top-course-thumb .desc-box .off {
+	  font-size: 46px;
+	  top: 46%;
+	}
+	.top-course-thumb .desc-box .title {
+	  font-size: 24px;
+	  top: 38%;
+	}
+	.top-course-thumb .desc-box .signup {
+	  top: 60%;
+	}
+}
